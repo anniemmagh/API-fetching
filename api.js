@@ -5,13 +5,13 @@ function getData() {
     fetch('https://randomuser.me/api?results=50')
         .then(res => res.json())
         .then(data => {
-            let gender=data.results;
+            let gender = data.results;
             ////get data value
-            let output="<h2><center>Get users Data</cener></h2>"
-        
+            let output = "<h2><center>Get users Data</cener></h2>"
+
             ////get data loop through
-            gender.forEach(function(lists){
-               output +=`
+            gender.forEach(function (lists) {
+                output += `
                <div class="container">
                <div class="card mt-4 bg-light">
                <ul class="list-group">
@@ -33,8 +33,8 @@ function getData() {
                </div>
               </div> `;
             })
-//// show on the screen
-document.getElementById('output').innerHTML=output;
+            //// show on the screen
+            document.getElementById('output').innerHTML = output;
 
         });
 };
